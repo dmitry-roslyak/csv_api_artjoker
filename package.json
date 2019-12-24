@@ -1,0 +1,20 @@
+{
+  "name": "csv-api-artjoker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "env-cmd -f ./prod.env node ./bin/www",
+    "dev": "env-cmd -f ./local.env node ./bin/www",
+    "debug": "env-cmd -f ./local.env node --inspect-brk ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "env-cmd": "^10.0.1",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "^2.0.4",
+    "sequelize": "^5.21.3"
+  }
+}
