@@ -5,10 +5,24 @@ const csv = require('csv');
 
 const usersHeaders = ["UserName", "FirstName", "LastName", "Age"];
 
-router.get('/', function (req, res, next) {
+router.get('/json', function (req, res, next) {
   User.findAll().then(users => {
     res.send(users)
   });
+});
+
+router.post('/csv', function (req, res, next) {
+  req.pipe(csv.parse({
+    columns: true
+  }, function (err, output) {
+    if (err) {
+      res.status(422).send({ error: err });
+    } else {
+      User.bulkCreate(output).then(function () {
+        res.send({ success: `${output.length} rows` });
+      });
+    }
+  }));
 });
 
 router.get('/csv', function (req, res, next) {
