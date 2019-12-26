@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "env-cmd -f ./prod.env node ./bin/www",
-    "dev": "env-cmd -f ./local.env node ./bin/www",
-    "debug": "env-cmd -f ./local.env node --inspect-brk ./bin/www"
+    "start": "env-cmd -f ./example.env node ./bin/www",
+    "debug": "env-cmd -f ./example.env node --inspect-brk ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
