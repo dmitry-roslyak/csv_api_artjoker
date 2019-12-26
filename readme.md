@@ -18,7 +18,7 @@ The remaining lines (example) - TheBlade, Boris, Yurinov, 47
 3) Launch `npm run start`
 
 | Method  | Link | Description |
-| ------------- | ------------- |
+| ------------- | ------------- |------------- |
 | GET | <http://localhost:3000/users/json>  | get json collection from db |
 | GET | <http://localhost:3000/users/csv>  | serialize collection to a file |
 | POST | <http://localhost:3000/users/csv>  | Upload binary file(csv),  parse & save collection to db |
